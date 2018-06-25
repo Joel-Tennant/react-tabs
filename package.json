@@ -16,6 +16,7 @@
     "lint": "eslint src",
     "precommit": "lint-staged",
     "prebump": "run-s lint test",
+    "preinstall": "yarn run build",
     "prepublish": "yarn run build",
     "release": "standard-version --sign",
     "test": "cross-env BABEL_OUTPUT=commonjs jest",
