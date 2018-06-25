@@ -40,8 +40,11 @@ export function childrenPropType(props, propName, componentName) {
       panelsCount++;
     }
   });
-
-  if (!error && tabsCount !== panelsCount) {
+  if (
+    !props.tabsListCountDoesNotNeedToMatchPanelsCount &&
+    !error &&
+    tabsCount !== panelsCount
+  ) {
     error = new Error(
       `There should be an equal number of 'Tab' and 'TabPanel' in \`${componentName}\`. ` +
         `Received ${tabsCount} 'Tab' and ${panelsCount} 'TabPanel'.`,

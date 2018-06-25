@@ -207,6 +207,26 @@ describe('<Tabs />', () => {
       expect(result).toBeInstanceOf(Error);
     });
 
+    test('should not have an imbalance error when TabList is disabled', () => {
+      const oldConsoleError = console.error; // eslint-disable-line no-console
+      console.error = () => {}; // eslint-disable-line no-console
+      const wrapper = shallow(
+        <Tabs tabsListCountDoesNotNeedToMatchPanelsCount>
+          <TabList>
+            <Tab>Foo</Tab>
+          </TabList>
+        </Tabs>,
+      );
+      console.error = oldConsoleError; // eslint-disable-line no-console
+
+      const result = Tabs.propTypes.children(
+        wrapper.props(),
+        'children',
+        'Tabs',
+      );
+      expect(result instanceof Error).toBe(false);
+    });
+
     test('should result with warning when tab outside of tablist', () => {
       const oldConsoleError = console.error; // eslint-disable-line no-console
       console.error = () => {}; // eslint-disable-line no-console

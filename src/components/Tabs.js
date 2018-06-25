@@ -32,6 +32,7 @@ export default class Tabs extends Component {
     selectedIndex: selectedIndexPropType,
     selectedTabClassName: PropTypes.string,
     selectedTabPanelClassName: PropTypes.string,
+    tabsListCountDoesNotNeedToMatchPanelsCount: PropTypes.bool,
   };
 
   constructor(props) {
