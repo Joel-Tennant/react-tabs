@@ -52,6 +52,7 @@ export default class UncontrolledTabs extends Component {
     selectedIndex: PropTypes.number.isRequired,
     selectedTabClassName: PropTypes.string,
     selectedTabPanelClassName: PropTypes.string,
+    tabsListCountDoesNotNeedToMatchPanelsCount: PropTypes.bool,
   };
 
   tabNodes = [];
@@ -333,6 +334,7 @@ export default class UncontrolledTabs extends Component {
       selectedIndex, // unused
       selectedTabClassName, // unused
       selectedTabPanelClassName, // unused
+      tabsListCountDoesNotNeedToMatchPanelsCount, // unused
       ...attributes
     } = this.props;
 

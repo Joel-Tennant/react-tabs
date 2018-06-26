@@ -14,6 +14,7 @@ export default class Tabs extends Component {
     forceRenderTabPanel: false,
     selectedIndex: null,
     defaultIndex: null,
+    tabsListCountDoesNotNeedToMatchPanelsCount: false,
   };
 
   static propTypes = {
