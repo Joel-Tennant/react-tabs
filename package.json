@@ -34,6 +34,9 @@
   "bugs": {
     "url": "https://github.com/reactjs/react-tabs/issues"
   },
+  "publishConfig": {
+    "registry": "http://nexus.dev.dsl.aws.shaw.ca:8081/repository/dsl-npm-private/"
+  },
   "files": [
     "dist",
     "esm",
